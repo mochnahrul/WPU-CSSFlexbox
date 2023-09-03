@@ -1,0 +1,61 @@
+/* Flexbox adalah modul layout satu dimensi yang dapat mengatur jarak dan penjajaran antar item dalam sebuah container */
+
+/* Property pada Container */
+
+/* display: flex; 
+Membuat sebuah elemen parent menjadi flexbox, dan membuat elemen-elemen di dalamnya bisa berperilaku flex juga */
+
+/* flex-direction: row | row-reverse | column | coulmn-reverse; 
+Untuk mengatur arah / urutan di dalam container */
+
+/* flex-wrap: nowrap | wrap | wrap-reverse; 
+Secara default, semua items di dalam container akan berada pada satu baris meskipun ukurannya sudah tidak cukup, wrap memungkinkan untuk memindahkan items ke baris di bawahnya */
+
+/* justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly;
+Mengatur jarak antar items */
+
+/* align-items: flex-start | flex-end | center | stretch | baseline; 
+Mengatur kesejajaran antar items secara vertical */
+
+/* align-content: flex-start | flex-end | center | stretch | space-between | space-around; 
+Mengatur jarak antar items terhadap cross axis (hanya berfungsi ketika items lebih dari 1 baris) */
+
+/* Property pada Items */
+
+/* order: 1; 
+Untuk mengatur urutan dari elemen-elemennya */
+
+/* flex-grow: 2; 
+Untuk mengatur ukuran dari items nya */
+
+/* align-self: auto | flex-start | flex-end | center | baseline | stretch; 
+Mengatur perilaku penjajaran sebuah item yang spesifik terhadap cross axis */
+
+.container {
+  width: 500px;
+  border: 5px solid black;
+  margin: 30px auto;
+  padding: 5px;
+  box-sizing: border-box;
+  display: flex;
+  /* flex-direction: row; */
+  /* flex-wrap: wrap; */
+  justify-content: space-evenly;
+  /* align-items: center; */
+}
+
+.container div {
+  width: 100px;
+  height: 100px;
+  background-color: lightblue;
+  margin: 2px;
+}
+
+.satu {
+  order: 4;
+}
+
+.dua {
+  order: 3;
+  flex-grow: 2;
+}
